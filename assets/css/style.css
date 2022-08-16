@@ -10,3 +10,7 @@
 #date1{
     list-style: none;
 }
+
+.navbar{
+    justify-content: space-evenly;
+}
