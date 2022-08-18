@@ -98,6 +98,43 @@ function getQuote(){
 }
 getQuote();
 
+var questions = [
+	{
+		question: 'How was your day?',
+		options: ['Good', 'Bad', 'Average', 'Terrible'],
+	},
+	{
+		question: 'What flavor are you looking for?',
+		options: ['Sweet', 'Savory', 'Salty', 'Strong'],
+	},
+	{
+		question: 'What alcohol source you want?',
+		options: ['Rye', 'Berries', 'Malt', 'Rice'],
+	},
+]
+
+function renderCurrentQuestion() {
+	anotherContainer.innerHTML = '';
+	var currentQuestion = questions[currentQuestionIndex];
+
+	var header = document.createElement('h1');
+	header.textContent = currentQuestion.question;
+	anotherContainer.appendChild(header);
+
+	var ulEl = document.createElement('ul');
+
+	for (var i = 0; i < currentQuestion.options.length; i++) {
+		var liEl = document.createElement('li');
+		liEl.textContent = currentQuestion.options[i];
+		ulEl.appendChild(liEl);
+	}
+
+	anotherContainer.appendChild(ulEl);
+
+}
+
+renderCurrentQuestion();
+
 // // $("#drinkBtn").on('click', getQuote)
 
 // // var newQuote = $(".quote")
