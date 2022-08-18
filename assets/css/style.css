@@ -26,10 +26,7 @@ html {
 
 
 
-/* #date1{
->>>>>>> main
-    list-style: none;
-} */
+
 
 
 .navbar{
@@ -56,7 +53,7 @@ html {
 }
 
 #greeting{
-    display: none;
+    /* display: none; */
 }
 
 #quote-box{
