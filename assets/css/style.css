@@ -1,12 +1,63 @@
 *{
-    border:dashed red 1px;
-
+    /* border:dashed red 1px; */
 }
 
-/* #cTemp{
-    font-size: 1rem;
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+html { 
+    background: url("../images/atlas.jpeg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+/* .bg-cover{
+    background-image: url("/Users/zverushka/Desktop/Cocktails-with-Kanye/assets/images/atlas.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
 } */
 
-#date1{
+
+
+/* #date1{
     list-style: none;
+} */
+
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid rgb(208, 146, 1) 1px;
 }
+
+
+#drinkImg{
+    height: 100%;
+    max-width: 400px;
+}
+
+#content{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#drink-box{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+    /* display: none; */
+}
+
+#greeting{
+    display: none;
+}
+
+#quote-box{
+    padding: 30px;
+}
+

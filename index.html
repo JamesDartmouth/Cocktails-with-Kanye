@@ -9,33 +9,60 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>Document</title>
+    <title>Cocktails with Kanye</title>
 </head>
 
 <body>
-    <header class="hero-body title">
-        Cocktails with Kanye
-    </header>
+    <div class="home-hero bg-cover">
 
-    <section class="container">
-        <div class="topbuttons">
-            <button>I'm Feeling "Yeezy"</button>
-        </div>
-        <div class="topbuttons">
-            <button>List Of Quotes</button>
-        </div>
-        <div class="topbuttons">
-            <button>List Of Drinks</button>
-        </div>
+        <nav class="navbar is-transparent p-3 mb-5" role="navigation" aria-label="main navigation">
 
-        <div id="quote"></div>
-        <div id="drinkName">DrinkNames</div>
-        <img id="drinkImg">
-        <div id="drinkIngre">Drink Ingredients</div>
-        <div id="drinkInstr">Drink Instructions</div>
+            <div class="navbar-brand"></div>
+            <a class="navbar-item is-size-2 has-text-white">Cocktails with Kanye</a>
 
-    </section>
+            <div class="navbar-end">
+                <a class="navbar-item has-text-white mx-3"> I'm Feeling "Yeezy</a>
+                <a class="navbar-item has-text-white mx-3"> List Of Quotes</a>
+                <!-- <a class="navbar-item has-text-white"> List Of Drinks</a> -->
+            </div>
+        </nav>
 
+        <section class="container has-text-white" id="content">
+
+            <div id="quote&recipe">
+                <div id="quote-box">
+                    <blockquote id="quote"></blockquote> <!-- Quote -->
+                    <p>- Kanye West</p>
+                </div>
+
+                <div id="greeting">
+                    <p>Would you like to order with the bartender or on your own?</p>
+                    <div class="columns" id="">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Box for drink img, ingredients and recipe -->
+            <div id="drink-box">
+                <div>
+                    <div class="columns" id="recipes">
+                        <div class="column">
+                            <img id="drinkImg"></img>
+                        </div>
+                        <div class="column">
+                            <div class="is-size-3" id="drinkName">DrinkNames</div>
+                            <div id="drinkIngre">Drink Ingredients</div>
+                        </div>
+                    </div>
+                    <div id="drinkInstr">Drink Instructions</div>
+                </div>
+
+            </div>
+        </section>
+    </div>
 
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <script src="./assets/js/script.js"></script>
