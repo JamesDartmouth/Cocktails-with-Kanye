@@ -25,9 +25,7 @@ html {
 
 
 
-/* #date1{
-    list-style: none;
-} */
+
 
 
 .navbar{
@@ -54,7 +52,7 @@ html {
 }
 
 #greeting{
-    display: none;
+    /* display: none; */
 }
 
 #quote-box{
