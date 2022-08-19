@@ -22,7 +22,14 @@ function selectDrink() {
 
 	// TO BE TIED TO DROPDOWN?????????????????????????????????????????????????
 
-	var liquor = "tequila"
+	// document.getElementById("dropdown-menu").addEventListener('click', function(event)){
+	// 	event.preventDefault;
+	// 	if(event.target.matches('a')){
+	// 		return getAttribute("data-id").document.getElementById()
+	// 	}
+	// }
+
+	var liquor = "vodka"
 
 
 
@@ -31,60 +38,66 @@ function selectDrink() {
 			return response.json();
 		})
 		.then(function (data) {
-			var liquorArr = []
+			var liquorArr = [];
 			console.log(data)
 
 			for (var i = 0; i < data.drinks.length; i++) {
-				liquorArr.push(JSON.stringify(data.drinks[i]))
+				liquorArr.push(data.drinks[i])
 			}
 			console.log(liquorArr)
 
-			// var liquorArr = [];
-			// var randomLiquor = Math.floor(Math.random() * liquorArr.length)
-			// var selectLiquor = liquorArr[randomLiquor]
-			// // var sixLiquor = []
+			var sixLiquor= []
+				for (var i = 0; i < 6; i++) {
+				var randomLiquor = Math.floor(Math.random() * liquorArr.length)
+				var selectLiquor = liquorArr[randomLiquor]
+				sixLiquor.push(selectLiquor)
+				}	
+				for (var prop in data.drinks) {
+					if (data.drinks[prop]) {
+						liquorArr.push(data.drinks[prop]);
+					}
+				}
+				console.log(sixLiquor)
 
-			// 	for (var i = 0; i < 6; i++) {
-			// 	sixLiquor.push(randomLiquor[i])
-			// 	}	
-			// 	for (var prop in data.drinks) {
-			// 		if (data.drinks[prop]) {
-			// 			liquorArr.push(data.drinks[prop]);
-			// 		}
-			// 	}
-
-			var rand1 = data.drinks[0]
-			var rand2 = data.drinks[1]
-			var rand3 = data.drinks[2]
-			var rand4 = data.drinks[3]
-			var rand5 = data.drinks[4]
-			var rand6 = data.drinks[5]
-
+			// var rand1 = data.drinks[0]
+			// var rand2 = data.drinks[1]
+			// var rand3 = data.drinks[2]
+			// var rand4 = data.drinks[3]
+			// var rand5 = data.drinks[4]
+			// var rand6 = data.drinks[5]
 
 
-			var drinkId = data.drinks[0].idDrink
+			// var drinkId = ""
 
+			document.getElementById("name1").textContent = sixLiquor[0].strDrink;
+			document.getElementById("pic1").src = sixLiquor[0].strDrinkThumb;
+			document.getElementById("card1").setAttribute("data-id", sixLiquor[0].idDrink)
 
-			document.getElementById("name1").textContent = data.drinks[0].strDrink;
-			document.getElementById("pic1").src = data.drinks[0].strDrinkThumb;
-			document.getElementById("card1").setAttribute("data-id", drinkId)
+			document.getElementById("name2").textContent = sixLiquor[1].strDrink;
+			document.getElementById("pic2").src = sixLiquor[1].strDrinkThumb;
+			document.getElementById("card1").setAttribute("data-id", sixLiquor[1].idDrink)
 
-			document.getElementById("name2").textContent = data.drinks[1].strDrink;
-			document.getElementById("pic2").src = data.drinks[1].strDrinkThumb;
+			document.getElementById("name3").textContent = sixLiquor[2].strDrink;
+			document.getElementById("pic3").src = sixLiquor[2].strDrinkThumb;
+			document.getElementById("card1").setAttribute("data-id", sixLiquor[2].idDrink)
 
-			document.getElementById("name3").textContent = data.drinks[2].strDrink;
-			document.getElementById("pic3").src = data.drinks[2].strDrinkThumb;
+			document.getElementById("name4").textContent = sixLiquor[3].strDrink;
+			document.getElementById("pic4").src = sixLiquor[3].strDrinkThumb;
+			document.getElementById("card1").setAttribute("data-id", sixLiquor[3].idDrink)
 
-			document.getElementById("name4").textContent = data.drinks[3].strDrink;
-			document.getElementById("pic4").src = data.drinks[3].strDrinkThumb;
+			document.getElementById("name5").textContent = sixLiquor[4].strDrink;
+			document.getElementById("pic5").src = sixLiquor[4].strDrinkThumb;
+			document.getElementById("card1").setAttribute("data-id", sixLiquor[4].idDrink)
 
-			document.getElementById("name5").textContent = data.drinks[4].strDrink;
-			document.getElementById("pic5").src = data.drinks[4].strDrinkThumb;
+			document.getElementById("name6").textContent = sixLiquor[5].strDrink;
+			document.getElementById("pic6").src = sixLiquor[5].strDrinkThumb;
+			document.getElementById("card1").setAttribute("data-id", sixLiquor[5].idDrink)
 
-			document.getElementById("name6").textContent = data.drinks[5].strDrink;
-			document.getElementById("pic6").src = data.drinks[5].strDrinkThumb;
+			console.log(sixLiquor[5].idDrink)
 
-
+			console.log()
+			
+			var drinkId=sixLiquor[5].idDrink
 			
 			fetch('https://the-cocktail-db.p.rapidapi.com/lookup.php?i=' + drinkId, options)
 				.then(function (response) {
@@ -130,16 +143,16 @@ function selectDrink() {
 				})
 
 			// LOCAL STORAGE AT END OF FUNCITON???????????????????????????????????????
-			// var quoteHistory = [] this are in global scope already above
-			// var drinkHistory =[] this are in global scope already above
+		// 	var quoteHistory = [] this are in global scope already above
+		// 	var drinkHistory =[] his are in global scope already above
 
-			// localStorage.setItem("quote", quote)
-			// var pastQuote = localstorage.getItem("quote")
-			// console.log(quote)
+		// 	localStorage.setItem("quote", quote)
+		// 	var pastQuote = localstorage.getItem("quote")
+		// 	console.log(quote)
 
-			// localStorage.setItem("drink", quote)
-			// var pastQuote = localstorage.getItem("drink")
-			// console.log(drink)	
+		// 	localStorage.setItem("drink", quote)
+		// 	var pastQuote = localstorage.getItem("drink")
+		// 	console.log(drink)	
 		}
 
 		)
@@ -305,6 +318,33 @@ function nextItem() {
 // 	console.log("drink")
 // }
 
+
+function prevItem() {
+	if (i === 0) {
+		i = arr.length;
+	}
+	i = i - 1
+
+	console.log(quoteHistory[i]);
+	console.log(drinkHistory[i]);
+
+	document.getElementById("quote").textContent = Object.values(quoteHistory[i])
+	document.getElementById("drinkName").textContent = drinkHistory[i].strDrink
+	document.getElementById("drinkInstr").textContent = drinkHistory[i].strInstructions
+	document.getElementById("drinkImg").src = drinkHistory[i].strDrinkThumb
+}
+function nextItem() {
+	i = i + 1
+	i = i % arr.length;
+
+	console.log(quoteHistory[i]);
+	console.log(drinkHistory[i]);
+
+	document.getElementById("quote").textContent = Object.values(quoteHistory[i])
+	document.getElementById("drinkName").textContent = drinkHistory[i].strDrink
+	document.getElementById("drinkInstr").textContent = drinkHistory[i].strInstructions
+	document.getElementById("drinkImg").src = drinkHistory[i].strDrinkThumb
+}
 // // WILLL RUN SELECT DRINK FUNCTION------------------------------
 $("#barBtn").on('click', function (event) {
 	event.preventDefault();
@@ -335,16 +375,16 @@ $("#menuBtn").on('click', function (event) {
 // })
 
 
-// // RETREIVE FROM LOCAL STORAGE???????????????????????????????
+// RETREIVE FROM LOCAL STORAGE???????????????????????????????
 // $("#nextBtn").on('click', function (event) {
 // 	event.preventDefault();
 // 	document.getElementById("greeting").style.display = "none";
 // 	document.getElementById("drink-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
+// }
+// // 	nextItem();
 
-// 	nextItem();
-
-// })
+// // })
 
 // // WILL RETURN USER TO INTRO PAGE---------------------------------
 // $("#NewBtn").on('click', function (event) {
@@ -356,17 +396,6 @@ $("#menuBtn").on('click', function (event) {
 
 
 // // EVENT LISTENERS FOR 6 CHOICES----------------------------------
-
-$("#card1").on('click', function (event) {
-	event.preventDefault();
-
-	document.getElementById("drink-box").style.display = "content";
-	document.getElementById("drinkCards").style.display = "none";
-
-	var DrinkId = $("#card1").getAttribute
-
-	selectDrink();
-})
 
 // $("#card2").on('click', function (event) {
 
@@ -410,5 +439,38 @@ $("#card1").on('click', function (event) {
 // 	document.getElementById("drinkCards").style.display = "none";
 // 	event.preventDefault();
 
-// 	getDrink()
-// })
+// 	getDrink(){}
+
+$("#card1").on('click', function (event) {
+	event.preventDefault();
+	var id= $(this).data('data-id')
+	
+	console.log(id)
+
+
+	// if(){	
+	// 	var id = document.getElementById("card1");
+	// 	var idAtt= id.getAttribute("data-id");
+	// 	console.log(idAtt);
+
+	// }	
+	
+	// if(event.target.matches('a')){
+	// 		return getAttribute("data-id").document.getElementById()
+	// 	}
+	// if(event.target.matches('a')){
+	// 	return getAttribute("data-id").document.getElementById()
+	// }if(event.target.matches('a')){
+	// 	return getAttribute("data-id").document.getElementById()
+	// }
+	// if(event.target.matches('a')){
+	// 	return getAttribute("data-id").document.getElementById()
+	// }
+	// if(event.target.matches('a')){
+	// 	return getAttribute("data-id").document.getElementById()
+	// }
+
+
+	document.getElementById("drink-box").style.display = "content";
+	document.getElementById("drinkCards").style.display = "none";
+})		

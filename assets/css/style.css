@@ -53,9 +53,9 @@ html {
 
 #greeting{
     /* display: none; */
-}
+} 
 
-#quote-box{
+ #quote-box{
     padding: 30px;
 }
 .card-image img{
