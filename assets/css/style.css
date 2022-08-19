@@ -58,4 +58,7 @@ html {
 #quote-box{
     padding: 30px;
 }
-
+.card-image img{
+    height:200px !important;
+    width: 200px !important;
+}
