@@ -1,6 +1,6 @@
-*{
-    /* border:dashed red 1px; */
-}
+/* *{
+    border:dashed red 1px;
+} */
 
 html { /* background image */
     background: url("../images/atlas.jpeg") no-repeat center center fixed;
@@ -33,6 +33,14 @@ html { /* background image */
     /* display: none; */
 }
 
-#greeting{
-    /* display: none; */
+/* #greeting{
+    display: none;
+} */
+
+ #quote-box{
+    padding: 30px;
+}
+.card-image img{
+    height:200px !important;
+    width: 200px !important;
 }
