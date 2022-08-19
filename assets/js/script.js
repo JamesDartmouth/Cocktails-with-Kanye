@@ -200,14 +200,14 @@ function selectDrink() {
 // 			document.getElementById("drinkInstr").textContent = drinkInstruc
 // 			document.getElementById("drinkImg").src = drinkPic
 // 		})
-// 	fetch('https://api.kanye.rest')
-// 		.then(function (response) {
-// 			return response.json();
-// 		})
-// 		.then(function (data) {
-// 			var quote = Object.values(data)
-// 			document.getElementById("quote").textContent = quote
-// 		})
+	fetch('https://api.kanye.rest')
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (data) {
+			var quote = Object.values(data)
+			document.getElementById("quote").textContent = quote
+		})
 
 // 	// LOCAL STORAGE AT END OF FUNCITON???????????????????????????????????????
 // 	// var quoteHistory = [] this are in global scope already above
