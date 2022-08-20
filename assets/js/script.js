@@ -163,6 +163,7 @@ function selectDrink() {
 // FUNCTION GETS SELECTED DRINK FROM 6 CHOICES
 
 // var drinkId = id1
+// THIS FUNCTIONS CODE WAS COPIED AND PASTED WITHIN SELECT DRINK FUNCTION
 
 // function getDrink(drinkId) {
 // 	console.log(typeof drinkId)
