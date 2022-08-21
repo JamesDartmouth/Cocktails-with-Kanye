@@ -2,190 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>Cocktails with Kanye</title>
+  <title>Cocktails with Kanye</title>
 </head>
 
 <body>
 
+  <!-- background image -->
+  <div class="home-hero bg-cover">
+    <!-- navbar -->
+    <nav class="navbar is-transparent p-3 mb-6" role="navigation" aria-label="main navigation">
+      <a class="navbar-item is-size-2 has-text-white">Cocktails with Kanye</a>
 
- 
-    <!-- This Drink Intro -->
-<!--  -->
+      <div class="navbar-end">
+        <a class="navbar-item has-text-white mx-3"> I'm Feeling Yeezy</a>
+        <a class="navbar-item has-text-white mx-3"> List Of Quotes</a>
+      </div>
+    </nav>
 
-    <!-- THIS IS DRINK MENU CARD -->
-    <div class="home-hero bg-cover">
-        <nav class="navbar is-transparent p-3 mb-5" role="navigation" aria-label="main navigation">
-            <a class="navbar-item is-size-2 has-text-white">Cocktails with Kanye</a>
+    <!-- black container with everything in it -->
+    <section class="container has-text-white mb-6" id="main-content">
 
-            <div class="navbar-end">
-                <a class="navbar-item has-text-white mx-3"> I'm Feeling "Yeezy</a>
-                <a class="navbar-item has-text-white mx-3"> List Of Quotes</a>
-                <!-- <a class="navbar-item has-text-white"> List Of Drinks</a> -->
-            </div>
-        </nav>
-
-        <section class="container has-text-white" id="content">
-
-            <div id="quote&recipe">
-                <div id="quote-box">
-                    <blockquote id="quote"></blockquote> <!-- Quote -->
-                    <p>- Kanye West</p>
-                </div>
-
-                <div id="greeting">
-                    <p>Would you like to order with the bartender or on your own?</p>
-                    <div class="columns" id="">
-                        <div class="column">What type of liquor do you prefer?</div>
-                            <div class="column dropdown is-hoverable">
-                                <div class="dropdown-trigger">
-                                    <button id= "menuBtn" class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
-                                        <span>Liquor</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                                    <div class="dropdown-content">
-                                        <a href="#vodka" class="dropdown-item">
-                                            Vodka
-                                        </a>
-                                        <a href="#"class="dropdown-item">
-                                            Whiskey
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            Gin
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            Rum
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            Tequila
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            Scotch
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            Bourbon
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="column">I'm feeling Yeezy, surprise me.</div>
-                        <button id ="barBtn" class="button column">Random</button>
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- Box for drink img, ingredients and recipe -->
-            <div id="drink-box">
-                <div>
-                    <div class="columns" id="recipes">
-                        <div class="column">
-                            <img id="drinkImg"></img>
-                        </div>
-                        <div class="column">
-                            <div class="is-size-3" id="drinkName">DrinkNames</div>
-                            <div id="drinkIngre">Drink Ingredients</div>
-                        </div>
-                    </div>
-                    <div id="drinkInstr">Drink Instructions</div>
-                </div>
-
-            </div>
-        </section>
-    </div>
-
-    <section class="section" id="content">
-        <div class="container notification">
-            <h1 id="Intro">
-                Welcome to Kanye's Cocktail Bar, please have a seat.
-            </h1>
-            <div class="columns">
-                <div class="column">
-                    Would you like to order from the menu?
-                </div>
-                <div class="column">
-                    Would you like to let the see the specials from the bartender?
-                </div>
-            </div>
-            <div class="columns">
-                <button id ="menuBtn" class="button column">Menu</button>
-                <button id = "barBtn" class="button column">Bartender</button>
-            </div>
+      <div class="p-6" id="quote&recipe">
+        <div class="p-3 has-text-centered" id="quote-box">
+          <blockquote class="is-size-4 is-italic" id="quote"></blockquote> <!-- Quote -->
+          <p class="is-size-5">- Kanye West</p>
         </div>
+
+        <div class="is-size-4 p-4 m-3" id="greeting">
+          <p class="is-size-3 p-6 has-text-centered">How would you like to order?</p>
+          <div class="columns" id="">
+            <div class="column has-text-centered">
+              <p class="is-size-4 pb-3">Order by liquor type</p>
+              <div class="dropdown is-hoverable">
+                  <button id="menuBtn" class="button is-warning is-outlined is-medium" aria-haspopup="true" aria-controls="dropdown-menu2">
+                    <span clas="">Liquor</span>
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </button>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#vodka" class="dropdown-item">
+                      Vodka
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Whiskey
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Gin
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Rum
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Tequila
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Scotch
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Bourbon
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column has-text-centered">
+                <p class="is-size-4 pb-3">I'm feeling Yeezy</p>
+                <button class="button is-warning is-outlined is-medium is-fullwidth" id="barBtn">Surprise me</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Box for drink img, ingredients and recipe -->
+      <div class="p-6" id="drink-box">
+        <div>
+          <div class="columns" id="recipes">
+            <div class="column">
+              <img id="drinkImg"></img>
+            </div>
+            <div class="column is-size-5">
+              <div class="is-size-3" id="drinkName">DrinkNames</div>
+              <div id="drinkIngre">Drink Ingredients:</div>
+            </div>
+          </div>
+          <div class="has-text-centered is-size-5" id="drinkInstr">Drink Instructions</div>
+        </div>
+
+
+
+
+      <!-- THIS SECTION WILL BRING UP A SUGGESTION of 6 drinks -->
+
+      <div class="container p-6" id="drinkCards">
+        <h1 class="is-size-4 pb-3">Here is a selection to choose from:</h1>
+        <div class="columns">
+          <div class="column is-one-third" id="card1">
+            <figure class="image is-1by1">
+              <img id="pic1" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+
+          <div class="column" id="card2">
+            <figure class="image image is-1by1">
+              <img id="pic2" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+
+          <div class="column" id="card3">
+            <figure class="image image is-1by1">
+              <img id="pic3" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+        </div>
+
+        <div class="columns" id="card4">
+          <div class="column is-one-third card4">
+            <figure class="image image is-1by1">
+              <img id="pic4" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+
+          <div class="column" id="card5">
+            <figure class="image image is-1by1">
+              <img id="pic5" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+
+          <div class="column" id="card6">
+            <figure class="image image is-1by1">
+              <img id="pic6" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- THIS SECTION WILL BRING UP A SUGGESTION of 6 drinks -->
 
-  <!-- THIS IS DRINK BARTENDER CARD --> -->
+    <!-- #drinkCards. #card1-6, #pic1-6, #name1-6 -->
 
-
-    <section class="section" id="content">
-        <div class="container notification">
-            <h1 id="bartender">
-                Bartender
-            </h1>
-            <div class="columns">
-                <div class="column">
-                    What type of liquor do you prefer?
-                </div>
-                <div class="column">
-                    I'm feeling Yeezy, surprise me.
-                </div>
-            </div>
-            <div class="columns ">
-                <div class="column dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
-                            <span>Liquor</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                        <div class="dropdown-content">
-                            <a href="#vodka" class="dropdown-item">
-                                Vodka
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Whiskey
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Gin
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Rum
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Tequila
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Scotch
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Bourbon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <button class="button column">Random</button>
-                </div>
-            </div>
-    </section> -->
-
-
-<!-- THIS SECTION WILL BRING UP A SUGGESTION of 6 drinks -->
-
-<section id= "drinkCards" class="section" id="content">
+    <!-- <section id= "drinkCards" class="section" id="content">
     <h1>
         Here is a selection to choose from:
     </h1>
@@ -264,48 +226,15 @@
             </p>
           </header>
         </div>
-      </div>
-
-       <!-- THIS IS DRINK CONTENT CARD -->
-
-    <!-- THIS SECTION WILL BRING UP A SUGGESTION of 6 drinks -->
+      </div> -->
 
 
-        <!-- THIS IS DRINK CONTENT CARD -->
+    <!-- </div> -->
 
-        <section class="section" id="content">
-            <div class="container notification">
-                <h1 id="quote">
-                    QUOTE
-                </h1>
-                <div class="columns">
-                    <div class="column">
-                        <figure class="image is-128x128">
-                            <img id="drinkImg">
-                        </figure>
-                    </div>
-                    <div class="column">
-                        <h2 class="content" id="drinkName">
-                            Drink Name
-                        </h2>
-                        <div class="content" id="drinkIngre">
-                            Drink Ingredients
-                        </div>
-                        <div class="content" id="drinkInstr">
-                            Instructions
-                        </div>
-                    </div>
-                </div>
-                <div class="columns has-text-centered">
-                    <button class="button column">Previous Drink</button>
-                    <button class="button column">Next Drink</button>
-                </div>
-            </div>
-        </section>
 
-        <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
-        <script src="./assets/js/script.js"></script>
-        <script src="./assets/js/del-test.js"></script>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/del-test.js"></script>
 </body>
 
 </html>

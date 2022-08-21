@@ -1,36 +1,21 @@
 *{
     /* border:dashed red 1px; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-html { 
-    background: url("../images/atlas.jpeg") no-repeat center center fixed; 
+html { /* background image */
+    background: url("../images/atlas.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
   }
   
-/* .bg-cover{
-    background-image: url("../images/atlas.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;
-} */
-
-
-
-
-
 
 .navbar{
     background-color: rgba(0, 0, 0, 0.7);
-    border: solid rgb(208, 146, 1) 1px;
+    border: solid #ffdd57 1px;
 }
 
 
@@ -39,7 +24,7 @@ html {
     max-width: 400px;
 }
 
-#content{
+#main-content{
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -47,18 +32,28 @@ html {
     display: flex;
     align-items: center; 
     justify-content: center;
-    padding: 20px;
     /* display: none; */
 }
 
-#greeting{
-    /* display: none; */
-}
+/* #greeting{
+    display: none;
+} */
 
-#quote-box{
-    padding: 30px;
+ #quote-box{
+    margin: 0px 100px 0px 100px;
+    border: solid #ffdd57 1px;
 }
 .card-image img{
     height:200px !important;
     width: 200px !important;
 }
+
+.dropdown {
+    width: 100%;
+  }
+  .dropdown-trigger {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
