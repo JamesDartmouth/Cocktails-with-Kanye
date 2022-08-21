@@ -47,25 +47,25 @@
                   </button>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                   <div class="dropdown-content">
-                    <a href="#vodka" class="dropdown-item">
+                    <a href="" value = "vodka" class="dropdown-item">
                       Vodka
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" value = "whiskey" class="dropdown-item">
                       Whiskey
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" value = "gin" class="dropdown-item">
                       Gin
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" value = "rum" class="dropdown-item">
                       Rum
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" value = "tequila" class="dropdown-item">
                       Tequila
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" value = "scotch" class="dropdown-item">
                       Scotch
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" value = "nourbon" class="dropdown-item">
                       Bourbon
                     </a>
                   </div>
@@ -93,8 +93,12 @@
             </div>
           </div>
           <div class="has-text-centered is-size-5" id="drinkInstr">Drink Instructions</div>
+          <div id= "drinkBtns" class="columns">
+              <button id="prevBtn" class="button is-warning is-outlined is-medium">Previous</button>
+              <button id="nextBtn" class="button is-warning is-outlined is-medium">Next</button>
+              <button id="newBtn" class="button is-warning is-outlined is-medium">New Drink</button>
+          </div>
         </div>
-
       </div>
 
 
@@ -108,18 +112,21 @@
             <figure class="image is-1by1">
               <img id="pic1" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <div id="name1"></div>
           </div>
 
           <div class="column" id="card2">
             <figure class="image image is-1by1">
               <img id="pic2" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <div id="name2"></div>
           </div>
 
           <div class="column" id="card3">
             <figure class="image image is-1by1">
               <img id="pic3" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <div id="name3"></div>
           </div>
         </div>
 
@@ -128,110 +135,28 @@
             <figure class="image image is-1by1">
               <img id="pic4" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <div id="name4"></div>
           </div>
 
           <div class="column" id="card5">
             <figure class="image image is-1by1">
               <img id="pic5" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <div id="name5"></div>
           </div>
 
           <div class="column" id="card6">
             <figure class="image image is-1by1">
               <img id="pic6" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <div id="name6"></div>
           </div>
         </div>
       </div>
     </section>
-    <!-- THIS SECTION WILL BRING UP A SUGGESTION of 6 drinks -->
-
-    <!-- #drinkCards. #card1-6, #pic1-6, #name1-6 -->
-
-    <!-- <section id= "drinkCards" class="section" id="content">
-    <h1>
-        Here is a selection to choose from:
-    </h1>
-    <div class="columns">
-        <div id= "card1" class="card">
-          <div class="card-image">
-            <figure class="image is-1by1">
-              <img id ="pic1" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p id ="name1" class="card-header-title">
-              Drink Name
-            </p>
-          </header>
-        </div>
-        <div id= "card2" class="card">
-          <div class="card-image">
-            <figure class="image image is-1by1">
-              <img id ="pic2" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p id ="name2" class="card-header-title">
-              Drink Name
-            </p>
-          </header>
-        </div>
-        <div id= "card3" class="card">
-          <div class="card-image">
-            <figure class="image image is-1by1">
-              <img id ="pic3" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p id ="name3" class="card-header-title">
-              Drink Name
-            </p>
-          </header>
-        </div>
-      </div>
-      <div class="columns">
-        <div id = "class1 card4" class="card">
-          <div  class="card-image">
-            <figure class="image image is-1by1">
-              <img id ="pic4" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p id ="name4" class="card-header-title">
-              Drink Name
-            </p>
-          </header>
-        </div>
-        <div id= "card5" class="card">
-          <div class="card-image">
-            <figure class="image image is-1by1">
-              <img id ="pic5" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p id ="name5"class="card-header-title">
-              Drink Name
-            </p>
-          </header>
-        </div>
-        <div id= "card6" class="card">
-          <div class="card-image">
-            <figure class="image image is-1by1">
-              <img id ="pic6" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <header class="card-header">
-            <p id ="name6"class="card-header-title">
-              Drink Name
-            </p>
-          </header>
-        </div>
-      </div> -->
 
 
-    <!-- </div> -->
-
+    
 
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <script src="./assets/js/script.js"></script>

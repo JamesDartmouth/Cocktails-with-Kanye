@@ -57,3 +57,6 @@ html { /* background image */
   button {
     width: 100%;
   }
+  #drinkBtns{
+    margin-top: 1rem;
+  }
