@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -16,25 +20,27 @@
 
   <!-- background image -->
   <div class="home-hero bg-cover">
+
     <!-- navbar -->
     <nav class="navbar is-transparent p-3 mb-6" role="navigation" aria-label="main navigation">
-      <a class="navbar-item is-size-2 has-text-white">Cocktails with Kanye</a>
+      <a class="navbar-item is-size-2 has-text-white" href="index.html">Cocktails with Kanye</a>
 
       <div class="navbar-end">
-        <a class="navbar-item has-text-white mx-3"> I'm Feeling Yeezy</a>
-        <a class="navbar-item has-text-white mx-3"> List Of Quotes</a>
+        <a class="navbar-item has-text-white mx-3 is-size-5"> I'm Feeling Yeezy</a>
       </div>
     </nav>
 
     <!-- black container with everything in it -->
     <section class="container has-text-white mb-6" id="main-content">
 
+      <!-- Quote -->
       <div class="p-6" id="quote&recipe">
         <div class="p-3 has-text-centered" id="quote-box">
-          <blockquote class="is-size-4 is-italic" id="quote"></blockquote> <!-- Quote -->
+          <blockquote class="is-size-4 is-italic" id="quote"></blockquote>
           <p class="is-size-5">- Kanye West</p>
         </div>
 
+        <!-- Intro/greeting -->
         <div class="is-size-4 p-4 m-3" id="greeting">
           <p class="is-size-3 p-6 has-text-centered">How would you like to order?</p>
           <div class="columns" id="">
@@ -42,8 +48,7 @@
               <p class="is-size-4 pb-3">Order by liquor type</p>
               <div class="dropdown is-hoverable">
                   <button id="menuBtn" class="button is-warning is-outlined is-medium" aria-haspopup="true" aria-controls="dropdown-menu2">
-                    <span clas="">Liquor</span>
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    <span>Liquor</span><span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
                   </button>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                   <div class="dropdown-content">
@@ -74,12 +79,14 @@
             </div>
             <div class="column has-text-centered">
                 <p class="is-size-4 pb-3">I'm feeling Yeezy</p>
-                <button class="button is-warning is-outlined is-medium is-fullwidth" id="barBtn">Surprise me</button>
+                <button class="button is-warning is-outlined is-medium is-fullwidth" id="barBtn">
+                  <span>Surprise me</span>
+                </button>
             </div>
           </div>
         </div>
-
       </div>
+
       <!-- Box for drink img, ingredients and recipe -->
       <div class="p-6" id="drink-box">
         <div>
@@ -94,7 +101,6 @@
           </div>
           <div class="has-text-centered is-size-5" id="drinkInstr">Drink Instructions</div>
         </div>
-
       </div>
 
 
@@ -108,18 +114,33 @@
             <figure class="image is-1by1">
               <img id="pic1" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <header class="card-header">
+              <p id ="name1" class="card-header-title has-text-warning">
+                Drink Name
+              </p>
+            </header>
           </div>
 
           <div class="column" id="card2">
             <figure class="image image is-1by1">
               <img id="pic2" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <header class="card-header">
+              <p id ="name2" class="card-header-title has-text-warning">
+                Drink Name
+              </p>
+            </header>
           </div>
 
           <div class="column" id="card3">
             <figure class="image image is-1by1">
               <img id="pic3" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <header class="card-header">
+              <p id ="name3" class="card-header-title has-text-warning">
+                Drink Name
+              </p>
+            </header>
           </div>
         </div>
 
@@ -128,22 +149,43 @@
             <figure class="image image is-1by1">
               <img id="pic4" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <header class="card-header">
+              <p id ="name4" class="card-header-title has-text-warning">
+                Drink Name
+              </p>
+            </header>
           </div>
 
           <div class="column" id="card5">
             <figure class="image image is-1by1">
               <img id="pic5" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <header class="card-header">
+              <p id ="name5" class="card-header-title has-text-warning">
+                Drink Name
+              </p>
+            </header>
           </div>
 
           <div class="column" id="card6">
             <figure class="image image is-1by1">
               <img id="pic6" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
+            <header class="card-header">
+              <p id ="name6" class="card-header-title has-text-warning">
+                Drink Name
+              </p>
+            </header>
           </div>
+        </div>
+        <!-- Prev & Next Buttons -->
+        <div class="buttons has-addons is-centered">
+          <button id="Prev" class="button is-warning is-outlined"><span class="icon"><i class="fas fa-arrow-left"></i></span><span>Prev</span></button>
+          <button id="Next" class="button is-warning is-outlined"><span>Next</span><span class="icon"><i class="fas fa-arrow-right"></i></span></button>
         </div>
       </div>
     </section>
+    
     <!-- THIS SECTION WILL BRING UP A SUGGESTION of 6 drinks -->
 
     <!-- #drinkCards. #card1-6, #pic1-6, #name1-6 -->
