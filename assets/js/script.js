@@ -2,9 +2,11 @@
 var quoteHistory = []
 var drinkHistory = []
 var sixPack = []
+let liquorArr = []
 
 
 document.getElementById("drink-box").style.display = "none";
+document.getElementById("quote-box").style.display = "none";
 
 const options = {
 	method: 'GET',
@@ -16,30 +18,30 @@ const options = {
 
 function selectDrink() {
 
-	// var menu = document.getElementsByClassName('dropdown-content')
-	// menu.addEventListener("value", generateData);
-
-	// TO BE TIED TO DROPDOWN?????????????????????????????????????????????????
-
-	// document.getElementById("dropdown-menu").addEventListener('click', function(event)){
-	// 	event.preventDefault;
-	// 	if(event.target.matches('a')){
-	// 		return getAttribute("data-id").document.getElementById()
-	
-	// var liquor = document.getElementsByClassName("dropdown-item").value
+	const options = {
+		method: "GET",
+		headers: {
+		  "X-RapidAPI-Key": "34bfbcce05msh118f7d7c2830c51p14f9d6jsna024c8daa8cb",
+		  "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+		},
+	  };
+	  
 	
 	var liquor = "vodka"
-	var liquorArr = []
 	
-	fetch('https://the-cocktail-db.p.rapidapi.com/filter.php?i=' + liquor, options)
+	fetch(
+		"https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + liquor,
+		options
+	  )
 		.then(function (response) {
-			return response.json();
+		  return response.json();	
 		})
 		.then(function (data) {
-console.log(data)
-			for (var i = 0; i < data.drinks.length; i++) {
-				liquorArr.push(data.drinks[i])
-			}
+	
+		  console.log(data);
+		  for (var i = 0; i < data.drinks.length; i++) {
+			liquorArr.push(data.drinks[i]);
+		  }
 
 			// var sixLiquor = []
 			// for (var i = 0; i < 18; i++) {
@@ -55,11 +57,12 @@ console.log(data)
 			// }
 			// console.log(liquorArr)
 
-			var liquorArr = liquorArr.slice (0, 18);
-			console.log(liquorArr);
-			// displayDrinks(liquorArr);
-			// console.log(liquorArr[5].idDrink)
-			// console.log(data)
+			liquorArr = liquorArr.slice(0, 18);
+      console.log(liquorArr);
+      // displayDrinks(liquorArr);
+      // console.log(liquorArr[5].idDrink)
+      // console.log(data)
+	  displayDrinks(liquorArr)
 		})
 }	
 
@@ -295,6 +298,7 @@ $("#barBtn").on('click', function (event) {
 
 	document.getElementById("greeting").style.display = "none";
 	document.getElementById("drink-box").style.display = "block";
+	document.getElementById("quote-box").style.display = "block";
 
 	randomDrink();
 })
