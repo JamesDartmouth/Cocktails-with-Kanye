@@ -54,7 +54,7 @@ html { /* background image */
   .dropdown-trigger {
     width: 100%;
   }
-  button {
+  #menuBtn {
     width: 100%;
   }
   #drinkBtns{

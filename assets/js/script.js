@@ -1,7 +1,10 @@
 // var slideEl = document.getElementById("slide")
 var quoteHistory = []
 var drinkHistory = []
-// var sixPack = []
+var sixPack = []
+
+document.getElementById("drink-box").style.display = "none";
+
 
 const options = {
 	method: 'GET',
@@ -207,9 +210,153 @@ function randomDrink() {
 	// var quoteHistory = [] this are in global scope already above
 	// var drinkHistory =[] this are in global scope already above
 
-	// function prevItem() {
-	// 	if (i === 0) {
-	// 		i = arr.length;
+
+// LOCAL STORAGE AT END OF FUNCITON???????????????????????????????
+// var quoteHistory = [] this are in global scope already above
+// var drinkHistory =[] this are in global scope already above
+
+// 	localStorage.setItem("quote", quote)
+// 	var pastQuote = localstorage.getItem("quote")
+// 	console.log(pastQuote)
+
+// 	localStorage.setItem("drink", quote)
+// 	var pastQuote = localstorage.getItem("drink")
+// 	console.log("drink")
+// }
+
+
+function prevItem() {
+	if (i === 0) {
+		i = arr.length;
+	}
+	i = i - 1
+
+	console.log(quoteHistory[i]);
+	console.log(drinkHistory[i]);
+
+	document.getElementById("quote").textContent = Object.values(quoteHistory[i])
+	document.getElementById("drinkName").textContent = drinkHistory[i].strDrink
+	document.getElementById("drinkInstr").textContent = drinkHistory[i].strInstructions
+	document.getElementById("drinkImg").src = drinkHistory[i].strDrinkThumb
+}
+function nextItem() {
+	i = i + 1
+	i = i % arr.length;
+
+	console.log(quoteHistory[i]);
+	console.log(drinkHistory[i]);
+
+	document.getElementById("quote").textContent = Object.values(quoteHistory[i])
+	document.getElementById("drinkName").textContent = drinkHistory[i].strDrink
+	document.getElementById("drinkInstr").textContent = drinkHistory[i].strInstructions
+	document.getElementById("drinkImg").src = drinkHistory[i].strDrinkThumb
+}
+// // WILLL RUN SELECT DRINK FUNCTION------------------------------
+$("#barBtn").on('click', function (event) {
+	event.preventDefault();
+
+	document.getElementById("greeting").style.display = "none";
+	document.getElementById("drink-box").style.display = "block";
+
+	randomDrink();
+})
+// WILL RUN SELECT DRINK FUNCTION---------------------------------
+$("#menuBtn").on('click', function (event) {
+	event.preventDefault();
+	document.getElementById("greeting").style.display = "none";
+	document.getElementById("drink-box").style.display = "content";
+
+	selectDrink();
+})
+
+
+// // RETREIVE FROM LOCAL STORAGE?????????????????????????????????
+// $("#prevBtn").on('click', function (event) {
+// 	event.preventDefault();
+// 	document.getElementById("greeting").style.display = "none";
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+
+// 	prevItem();
+// })
+
+
+// RETREIVE FROM LOCAL STORAGE???????????????????????????????
+// $("#nextBtn").on('click', function (event) {
+// 	event.preventDefault();
+// 	document.getElementById("greeting").style.display = "none";
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+// }
+// // 	nextItem();
+
+// // })
+
+// // WILL RETURN USER TO INTRO PAGE---------------------------------
+// $("#NewBtn").on('click', function (event) {
+// 	event.preventDefault();
+// 	document.getElementById("greeting").style.display = "content";
+// 	document.getElementById("drink-box").style.display = "none";
+// 	document.getElementById("drinkCards").style.display = "none";
+// })
+
+
+// // EVENT LISTENERS FOR 6 CHOICES----------------------------------
+
+// $("#card2").on('click', function (event) {
+
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+// 	event.preventDefault();
+// 	var DrinkId =
+// 		getDrink()
+// })
+
+// $("#card3").on('click', function (event) {
+
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+// 	event.preventDefault();
+
+// 	getDrink()
+// })
+
+// $("#card4").on('click', function (event) {
+
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+// 	event.preventDefault();
+
+// 	getDrink()
+// })
+
+// $("#card5").on('click', function (event) {
+
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+// 	event.preventDefault();
+
+// 	getDrink()
+// })
+
+// $("#card6").on('click', function (event) {
+
+// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("drinkCards").style.display = "none";
+// 	event.preventDefault();
+
+// 	getDrink(){}
+
+
+	// if(){	
+	// 	var id = document.getElementById("card1");
+	// 	var idAtt= id.getAttribute("data-id");
+	// 	console.log(idAtt);
+
+	// }	
+	
+	// if(event.target.matches('a')){
+	// 		return getAttribute("data-id").document.getElementById()
 	// 	}
 	// 	i = i - 1
 
@@ -233,6 +380,7 @@ function randomDrink() {
 	// 	document.getElementById("drinkInstr").textContent = drinkHistory[i].strInstructions
 	// 	document.getElementById("drinkImg").src = drinkHistory[i].strDrinkThumb
 	// }
+
 
 
 	// // WILLL RUN SELECT DRINK FUNCTION------------------------------
@@ -354,8 +502,21 @@ function randomDrink() {
 		console.log(typeof drinkSet)
 	
 		getDrink()
+
+		document.getElementById("drink-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("greeting").style.display = "none";
 	})
 
+	$("#yeezy").on('click', function (event) {
+		event.preventDefault();
+
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("drink-box").style.display = "content";
+
+		randomDrink();
+	})
+	
 	// 	// if(){	
 	// 	// 	var id = document.getElementById("card1");
 	// 	// 	var idAtt= id.getAttribute("data-id");
@@ -379,6 +540,4 @@ function randomDrink() {
 	// 	// }
 
 
-	// 	document.getElementById("drink-box").style.display = "content";
-	// 	document.getElementById("drinkCards").style.display = "none";
-	// })
+
