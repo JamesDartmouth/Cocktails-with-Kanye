@@ -5,7 +5,6 @@ var sixPack = []
 
 document.getElementById("drink-box").style.display = "none";
 
-
 const options = {
 	method: 'GET',
 	headers: {
@@ -538,6 +537,3 @@ $("#menuBtn").on('click', function (event) {
 	// 	// if(event.target.matches('a')){
 	// 	// 	return getAttribute("data-id").document.getElementById()
 	// 	// }
-
-
-
