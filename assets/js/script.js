@@ -3,6 +3,7 @@ var quoteHistory = []
 var drinkHistory = []
 var sixPack = []
 
+document.getElementById("drink-box").style.display = "none";
 
 const options = {
 	method: 'GET',
@@ -350,7 +351,7 @@ $("#barBtn").on('click', function (event) {
 	event.preventDefault();
 
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("drink-box").style.display = "content";
+	document.getElementById("drink-box").style.display = "block";
 
 	randomDrink();
 })
@@ -471,6 +472,7 @@ $("#card1").on('click', function (event) {
 	// }
 
 
-	document.getElementById("drink-box").style.display = "content";
+	document.getElementById("drink-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
+	document.getElementById("greeting").style.display = "none";
 })		
