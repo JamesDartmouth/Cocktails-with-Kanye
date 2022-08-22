@@ -5,8 +5,8 @@ var sixPack = []
 let liquorArr = []
 
 
-document.getElementById("drink-box").style.display = "none";
-document.getElementById("quote-box").style.display = "none";
+document.getElementById("quote-recipe-box").style.display = "none";
+document.getElementById("drinkCards").style.display = "none";
 
 const options = {
 	method: 'GET',
@@ -104,6 +104,7 @@ if (page <= numPages){
 	displayDrinks (paginate (liquorArr, 6, page));
 	if (page === numPages){
 		document.getElementById("nextSix").disabled = true;
+		document.getElementById("prevSix").disabled = false;
 	}
 }
 });
@@ -115,6 +116,7 @@ document.getElementById("prevSix").addEventListener("click", function(){
 		displayDrinks (paginate (liquorArr, 6, page));
 		if (page === 1){
 			document.getElementById("prevSix").disabled = true;
+			document.getElementById("nextSix").disabled = false;
 		}
 	}
 });
@@ -295,10 +297,9 @@ function nextItem() {
 // // WILLL RUN SELECT DRINK FUNCTION------------------------------
 $("#barBtn").on('click', function (event) {
 	event.preventDefault();
-
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("drink-box").style.display = "block";
-	document.getElementById("quote-box").style.display = "block";
+	document.getElementById("quote-recipe-box").style.display = "block";
+	
 
 	randomDrink();
 })
@@ -306,7 +307,7 @@ $("#barBtn").on('click', function (event) {
 $("#menuBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("drink-box").style.display = "content";
+	document.getElementById("drinkCards").style.display = "block";
 
 	selectDrink();
 })
@@ -316,7 +317,7 @@ $("#menuBtn").on('click', function (event) {
 // $("#prevBtn").on('click', function (event) {
 // 	event.preventDefault();
 // 	document.getElementById("greeting").style.display = "none";
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 
 // 	prevItem();
@@ -327,7 +328,7 @@ $("#menuBtn").on('click', function (event) {
 // $("#nextBtn").on('click', function (event) {
 // 	event.preventDefault();
 // 	document.getElementById("greeting").style.display = "none";
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 // }
 // // 	nextItem();
@@ -338,7 +339,7 @@ $("#menuBtn").on('click', function (event) {
 $("#NewBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "block";
-	document.getElementById("drink-box").style.display = "none";
+	document.getElementById("quote-recipe-box").style.display = "none";
 	document.getElementById("drinkCards").style.display = "none";
 });
 
@@ -347,7 +348,7 @@ $("#NewBtn").on('click', function (event) {
 
 // $("#card2").on('click', function (event) {
 
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 // 	event.preventDefault();
 // 	var DrinkId =
@@ -356,7 +357,7 @@ $("#NewBtn").on('click', function (event) {
 
 // $("#card3").on('click', function (event) {
 
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 // 	event.preventDefault();
 
@@ -365,7 +366,7 @@ $("#NewBtn").on('click', function (event) {
 
 // $("#card4").on('click', function (event) {
 
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 // 	event.preventDefault();
 
@@ -374,7 +375,7 @@ $("#NewBtn").on('click', function (event) {
 
 // $("#card5").on('click', function (event) {
 
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 // 	event.preventDefault();
 
@@ -383,7 +384,7 @@ $("#NewBtn").on('click', function (event) {
 
 // $("#card6").on('click', function (event) {
 
-// 	document.getElementById("drink-box").style.display = "content";
+// 	document.getElementById("quote-recipe-box").style.display = "content";
 // 	document.getElementById("drinkCards").style.display = "none";
 // 	event.preventDefault();
 
@@ -430,7 +431,7 @@ $("#NewBtn").on('click', function (event) {
 		event.preventDefault();
 
 		document.getElementById("greeting").style.display = "none";
-		document.getElementById("drink-box").style.display = "content";
+		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
 
 		randomDrink();
@@ -439,7 +440,6 @@ $("#NewBtn").on('click', function (event) {
 	$("#menuBtn").on('click', function (event) {
 		event.preventDefault();
 		document.getElementById("greeting").style.display = "none";
-		document.getElementById("drink-box").style.display = "content";
 
 		var menu = document.getElementsByClassName('dropdown-menu')
 		// menu.addEventListener("click", function(event){
@@ -461,7 +461,7 @@ $("#NewBtn").on('click', function (event) {
 	// $("#prevBtn").on('click', function (event) {
 	// 	event.preventDefault();
 	// 	document.getElementById("greeting").style.display = "none";
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 
 	// 	prevItem();
@@ -472,7 +472,7 @@ $("#NewBtn").on('click', function (event) {
 	// $("#nextBtn").on('click', function (event) {
 	// 	event.preventDefault();
 	// 	document.getElementById("greeting").style.display = "none";
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// }
 	// // 	nextItem();
@@ -483,7 +483,7 @@ $("#NewBtn").on('click', function (event) {
 	// $("#newBtn").on('click', function (event) {
 	// 	event.preventDefault();
 	// 	document.getElementById("greeting").style.display = "content";
-	// 	document.getElementById("drink-box").style.display = "none";
+	// 	document.getElementById("quote-recipe-box").style.display = "none";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// })
 
@@ -492,7 +492,7 @@ $("#NewBtn").on('click', function (event) {
 
 	// $("#card2").on('click', function (event) {
 
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// 	event.preventDefault();
 	// 	var DrinkId =
@@ -501,7 +501,7 @@ $("#NewBtn").on('click', function (event) {
 
 	// $("#card3").on('click', function (event) {
 
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// 	event.preventDefault();
 
@@ -510,7 +510,7 @@ $("#NewBtn").on('click', function (event) {
 
 	// $("#card4").on('click', function (event) {
 
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// 	event.preventDefault();
 
@@ -519,7 +519,7 @@ $("#NewBtn").on('click', function (event) {
 
 	// $("#card5").on('click', function (event) {
 
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// 	event.preventDefault();
 
@@ -528,7 +528,7 @@ $("#NewBtn").on('click', function (event) {
 
 	// $("#card6").on('click', function (event) {
 
-	// 	document.getElementById("drink-box").style.display = "content";
+	// 	document.getElementById("quote-recipe-box").style.display = "content";
 	// 	document.getElementById("drinkCards").style.display = "none";
 	// 	event.preventDefault();
 
@@ -546,7 +546,7 @@ $("#NewBtn").on('click', function (event) {
 	
 		getDrink()
 
-		document.getElementById("drink-box").style.display = "block";
+		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
 		document.getElementById("greeting").style.display = "none";
 	})
@@ -555,7 +555,7 @@ $("#NewBtn").on('click', function (event) {
 		event.preventDefault();
 
 		document.getElementById("greeting").style.display = "none";
-		document.getElementById("drink-box").style.display = "block";
+		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
 
 		randomDrink();
