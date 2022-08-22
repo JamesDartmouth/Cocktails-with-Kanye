@@ -625,8 +625,16 @@ $("#yeezy").on('click', function (event) {
 // 	// 	return getAttribute("data-id").document.getElementById()
 // 	// }
 
-$(".dropdown-content").on('click', function liqpick(event) {
+
+
+
+// ***DROPDOWN MENU CLICK FUNCTION***
+// Look in the console to see the results when you click on a choie in the liquor dropdown menu.
+// Struggling to figure out how to get data to render to page. 
+// Struggling to make he function repeat until it finds a match instead of having to click until you find a match.
+$(".dropdown-content").on('click', function (event) {
 	// console.log(event.target.textContent);
+	var set = false 
 	var liqtype = event.target.textContent.trim().toLowerCase();
 	fetch('https://the-cocktail-db.p.rapidapi.com/random.php', options)
 		.then(function (response) {
@@ -639,6 +647,7 @@ $(".dropdown-content").on('click', function liqpick(event) {
 			console.log(liqtype);
 			if (ing1.includes(liqtype)) {
 					console.log('*MATCH*');
+					set = true
 
 					var drinkData = data.drinks[0]
 					var drinkPic = data.drinks[0].strDrinkThumb
@@ -678,8 +687,9 @@ $(".dropdown-content").on('click', function liqpick(event) {
 							console.log(data)
 						})
 				}
-				// else {
-				// }
+				else {
+					(event)
+				}
 			}
 
 
