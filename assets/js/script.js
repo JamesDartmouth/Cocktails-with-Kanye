@@ -300,9 +300,9 @@ $("#barBtn").on('click', function (event) {
 	document.getElementById("greeting").style.display = "none";
 	document.getElementById("quote-recipe-box").style.display = "block";
 	
-
 	randomDrink();
 })
+
 // WILL RUN SELECT DRINK FUNCTION---------------------------------
 $("#menuBtn").on('click', function (event) {
 	event.preventDefault();
@@ -426,16 +426,41 @@ $("#NewBtn").on('click', function (event) {
 
 
 
-	// // WILLL RUN SELECT DRINK FUNCTION------------------------------
+	// WILLL RUN RANDOM DRINK FUNCTION------------------------------
 	$("#barBtn").on('click', function (event) {
 		event.preventDefault();
 
 		document.getElementById("greeting").style.display = "none";
 		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("drinkBtns").style.display = "none";
 
 		randomDrink();
 	})
+
+	$("#yeezy").on('click', function (event) {
+		event.preventDefault();
+
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("quote-recipe-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("drinkBtns").style.display = "none";
+
+		randomDrink();
+	})
+
+	$("#newRandomDrink").on('click', function (event) {
+		event.preventDefault();
+
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("quote-recipe-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("drinkBtns").style.display = "none";
+
+		randomDrink();
+	})
+
+
 	// WILL RUN SELECT DRINK FUNCTION---------------------------------
 	$("#menuBtn").on('click', function (event) {
 		event.preventDefault();
@@ -549,17 +574,9 @@ $("#NewBtn").on('click', function (event) {
 		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
 		document.getElementById("greeting").style.display = "none";
+		document.getElementById("randomDrinkBtns").style.display = "none";
 	})
 
-	$("#yeezy").on('click', function (event) {
-		event.preventDefault();
-
-		document.getElementById("greeting").style.display = "none";
-		document.getElementById("quote-recipe-box").style.display = "block";
-		document.getElementById("drinkCards").style.display = "none";
-
-		randomDrink();
-	})
 	
 	// 	// if(){	
 	// 	// 	var id = document.getElementById("card1");
