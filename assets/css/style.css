@@ -20,24 +20,18 @@ html { /* background image */
 
 
 #drinkImg{
-    height: 100%;
-    max-width: 400px;
+  max-width: 400px;
 }
 
 #main-content{
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-#drink-box{
+#quote-recipe-box{
     display: flex;
     align-items: center; 
     justify-content: center;
-    /* display: none; */
 }
-
-/* #greeting{
-    display: none;
-} */
 
  #quote-box{
     margin: 0px 100px 0px 100px;
