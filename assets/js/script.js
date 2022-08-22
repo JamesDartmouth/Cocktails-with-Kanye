@@ -300,10 +300,9 @@ $("#barBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
 	document.getElementById("quote-recipe-box").style.display = "block";
-
-
 	randomDrink();
 })
+
 // WILL RUN SELECT DRINK FUNCTION---------------------------------
 $("#menuBtn").on('click', function (event) {
 	event.preventDefault();
@@ -426,14 +425,56 @@ $("#NewBtn").on('click', function (event) {
 // }
 
 
+// <<<<<<< HEAD
 
-// // WILLL RUN SELECT DRINK FUNCTION------------------------------
-$("#barBtn").on('click', function (event) {
-	event.preventDefault();
+// // // WILLL RUN SELECT DRINK FUNCTION------------------------------
+// $("#barBtn").on('click', function (event) {
+// 	event.preventDefault();
 
-	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "block";
-	document.getElementById("drinkCards").style.display = "none";
+// 	document.getElementById("greeting").style.display = "none";
+// 	document.getElementById("quote-recipe-box").style.display = "block";
+// 	document.getElementById("drinkCards").style.display = "none";
+// =======
+	// WILLL RUN RANDOM DRINK FUNCTION------------------------------
+	$("#barBtn").on('click', function (event) {
+		event.preventDefault();
+
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("quote-recipe-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("drinkBtns").style.display = "none";
+
+		randomDrink();
+	})
+
+	$("#yeezy").on('click', function (event) {
+		event.preventDefault();
+
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("quote-recipe-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("drinkBtns").style.display = "none";
+
+		randomDrink();
+	})
+
+	$("#newRandomDrink").on('click', function (event) {
+		event.preventDefault();
+
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("quote-recipe-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("drinkBtns").style.display = "none";
+
+		randomDrink();
+	})
+
+
+	// WILL RUN SELECT DRINK FUNCTION---------------------------------
+	$("#menuBtn").on('click', function (event) {
+		event.preventDefault();
+		document.getElementById("greeting").style.display = "none";
+// >>>>>>> main
 
 	randomDrink();
 })
@@ -649,4 +690,48 @@ $(".dropdown-content").on('click', function liqpick(event) {
 	// }
 	// )
 
+
+
+	// 	getDrink(){}
+
+	$("#card1").on('click', function (event) {
+		event.preventDefault();
+		var id = document.getElementById('card1')
+		var drinkSet= id.getAttribute('data-id')
+
+		document.getElementById("drinkCards").setAttribute("data-id", drinkSet)
+
+		console.log(drinkSet)
+		console.log(typeof drinkSet)
+	
+		getDrink()
+
+		document.getElementById("quote-recipe-box").style.display = "block";
+		document.getElementById("drinkCards").style.display = "none";
+		document.getElementById("greeting").style.display = "none";
+		document.getElementById("randomDrinkBtns").style.display = "none";
+	})
+
+	
+	// 	// if(){	
+	// 	// 	var id = document.getElementById("card1");
+	// 	// 	var idAtt= id.getAttribute("data-id");
+	// 	// 	console.log(idAtt);
+
+	// 	// }	
+
+	// 	// if(event.target.matches('a')){
+	// 	// 		return getAttribute("data-id").document.getElementById()
+	// 	// 	}
+	// 	// if(event.target.matches('a')){
+	// 	// 	return getAttribute("data-id").document.getElementById()
+	// 	// }if(event.target.matches('a')){
+	// 	// 	return getAttribute("data-id").document.getElementById()
+	// 	// }
+	// 	// if(event.target.matches('a')){
+	// 	// 	return getAttribute("data-id").document.getElementById()
+	// 	// }
+	// 	// if(event.target.matches('a')){
+	// 	// 	return getAttribute("data-id").document.getElementById()
+	// 	// }
 
