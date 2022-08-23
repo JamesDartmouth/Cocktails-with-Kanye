@@ -29,10 +29,7 @@ function selectDrink() {
 	
 	var liquor = "vodka"
 	
-	fetch(
-		"https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + liquor,
-		options
-	  )
+	fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + liquor, options)
 		.then(function (response) {
 		  return response.json();	
 		})
@@ -43,28 +40,11 @@ function selectDrink() {
 			liquorArr.push(data.drinks[i]);
 		  }
 
-			// var sixLiquor = []
-			// for (var i = 0; i < 18; i++) {
-			// var randomLiquor = Math.floor(Math.random() * liquorArr.length)
-			// var selectLiquor = liquorArr[randomLiquor]
-			// 	sixLiquor.push(selectLiquor)
-			// }
-			// console.log(liquorArr)
-			// for (var prop in data.drinks) {
-			// 	if (data.drinks[prop]) {
-			// 		liquorArr.push(data.drinks[prop]);
-			// 	}
-			// }
-			// console.log(liquorArr)
-
 			liquorArr = liquorArr.slice(0, 18);
       console.log(liquorArr);
-      // displayDrinks(liquorArr);
-      // console.log(liquorArr[5].idDrink)
-      // console.log(data)
 	  displayDrinks(liquorArr)
 		})
-}	
+};
 
 
 var page = 1;
@@ -577,7 +557,31 @@ $("#NewBtn").on('click', function (event) {
 		document.getElementById("randomDrinkBtns").style.display = "none";
 	})
 
+
+
+	// if (event.target.classlist.contains("far fa-heart")) {
+	// 	console.log("yes");
+	// }
 	
+
+function addEventListeners() {
+	const resultsDiv = document.querySelector("#results");
+	if(resultsDiv) {
+		resultsDiv.addEventListener('click', resultsDelegation);
+	}
+}
+
+function resultsDelegation(event){
+	event.preventDefault();
+
+	if (event.classlist.contains("get-recipe")){
+		console.log(event.target.dataset.id);
+		cocktail.getSingleRecipe(event.targetdataset.id)
+	}
+
+}
+
+
 	// 	// if(){	
 	// 	// 	var id = document.getElementById("card1");
 	// 	// 	var idAtt= id.getAttribute("data-id");
