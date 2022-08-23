@@ -647,15 +647,15 @@ $(".dropdown-content").on('click', function (event) {
 			console.log(liqtype);
 			if (ing1.includes(liqtype)) {
 					console.log('*MATCH*');
-					set = true
+					set = true;
 
-					var drinkData = data.drinks[0]
-					var drinkPic = data.drinks[0].strDrinkThumb
-					var drinkName = data.drinks[0].strDrink
-					var drinkInstruc = data.drinks[0].strInstructions
+					var drinkData = data.drinks[0];
+					var drinkPic = data.drinks[0].strDrinkThumb;
+					var drinkName = data.drinks[0].strDrink;
+					var drinkInstruc = data.drinks[0].strInstructions;
 					var ingredients = [];
 					var measures = [];
-					var ulEl = document.getElementById("drinkIngre")
+					var ulEl = document.getElementById("drinkIngre");
 
 					for (var prop in drinkData) {
 						if (drinkData[prop]) {
@@ -673,9 +673,14 @@ $(".dropdown-content").on('click', function (event) {
 						ulEl.appendChild(liEl);
 					}
 
-					document.getElementById("drinkName").textContent = drinkName
-					document.getElementById("drinkInstr").textContent = drinkInstruc
-					document.getElementById("drinkImg").src = drinkPic
+					// Tried to copy and paste from a function above, attempting to render information from api fetch to the page.
+					
+					// document.getElementById("drinkName").textContent = drinkName;
+					// document.getElementById("drinkInstr").textContent = drinkInstruc;
+					// document.getElementById("drinkImg").src = drinkPic;
+					// document.getElementById("name1").textContent = drinkName;
+					// document.getElementById("pic1").src = drinkPic;
+					// document.getElementById("card1").setAttribute("data-id", liquorArr[0])
 
 					fetch('https://api.kanye.rest')
 						.then(function (response) {
