@@ -17,7 +17,22 @@ const options = {
 	}
 };
 
+
+function selectDrink() {
+
+	const options = {
+		method: "GET",
+		headers: {
+		  "X-RapidAPI-Key": "34bfbcce05msh118f7d7c2830c51p14f9d6jsna024c8daa8cb",
+		  "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
+		},
+	  };
+	  
+	
+	
+
 function selectDrink(liquor) {
+
 
 	fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=" + liquor, options)
 		.then(function (response) {
@@ -30,25 +45,7 @@ function selectDrink(liquor) {
 				liquorArr.push(data.drinks[i]);
 			}
 
-			// var sixLiquor = []
-			// for (var i = 0; i < 18; i++) {
-			// var randomLiquor = Math.floor(Math.random() * liquorArr.length)
-			// var selectLiquor = liquorArr[randomLiquor]
-			// 	sixLiquor.push(selectLiquor)
-			// }
-			// console.log(liquorArr)
-			// for (var prop in data.drinks) {
-			// 	if (data.drinks[prop]) {
-			// 		liquorArr.push(data.drinks[prop]);
-			// 	}
-			// }
-			// console.log(liquorArr)
-
 			liquorArr = liquorArr.slice(0, 18);
-			console.log(liquorArr);
-			displayDrinks(liquorArr)
-		})
-}
 
 
 var page = 1;
@@ -348,6 +345,7 @@ $("#barBtn").on('click', function (event) {
 	randomDrink();
 })
 
+
 // RETREIVE FROM LOCAL STORAGE?????????????????????????????????
 $("#prevBtn").on('click', function (event) {
 	event.preventDefault();
@@ -368,6 +366,7 @@ $("#nextBtn").on('click', function (event) {
 	document.getElementById("hdrinkCards").style.display = "none";
 	nextItem();
 })
+
 
 
 // WILL RETURN USER TO INTRO PAGE---------------------------------
@@ -418,26 +417,6 @@ $("#dropdown-menu").on('click', function (event) {
 })
 
 
-// RETREIVE FROM LOCAL STORAGE?????????????????????????????????
-$("#prevBtn").on('click', function (event) {
-	event.preventDefault();
-	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
-	document.getElementById("drinkCards").style.display = "none";
-	document.getElementById("hdrinkCards").style.display = "none";
-
-	prevItem();
-})
-
-
-// RETREIVE FROM LOCAL STORAGE???????????????????????????????
-$("#nextBtn").on('click', function (event) {
-	event.preventDefault();
-	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
-	document.getElementById("drinkCards").style.display = "none";
-	document.getElementById("hdrinkCards").style.display = "none";
-})
 
 
 // EVENT LISTENERS ON CARDS----------------
@@ -604,3 +583,4 @@ document.getElementById("hprevSix").addEventListener("click", function () {
 		}
 	}
 });
+
