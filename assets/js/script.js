@@ -1,4 +1,4 @@
-// var slideEl = document.getElementById("slide")
+
 var quoteHistory = []
 var drinkHistory = []
 var sixPack = []
@@ -372,7 +372,7 @@ $("#nextBtn").on('click', function (event) {
 
 
 // WILL RETURN USER TO INTRO PAGE---------------------------------
-$("#NewBtn").on('click', function (event) {
+$("#newBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "block";
 	document.getElementById("quote-recipe-box").style.display = "none";
@@ -388,7 +388,7 @@ $("#NewBtn").on('click', function (event) {
 		document.getElementById("greeting").style.display = "none";
 		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
-		document.getElementById("drinkBtns").style.display = "none";
+		// document.getElementById("drinkBtns").style.display = "none";
 		document.getElementById("hdrinkCards").style.display = "none";
 
 		randomDrink();
@@ -400,7 +400,7 @@ $("#NewBtn").on('click', function (event) {
 		document.getElementById("greeting").style.display = "none";
 		document.getElementById("quote-recipe-box").style.display = "block";
 		document.getElementById("drinkCards").style.display = "none";
-		document.getElementById("drinkBtns").style.display = "none";
+		// document.getElementById("drinkBtns").style.display = "none";
 		document.getElementById("hdrinkCards").style.display = "none";
 
 		randomDrink();
