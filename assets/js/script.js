@@ -5,6 +5,7 @@ var sixPack = []
 let liquorArr = []
 
 
+
 document.getElementById("quote-recipe-box").style.display = "none";
 document.getElementById("drinkCards").style.display = "none";
 document.getElementById("hdrinkCards").style.display = "none";
@@ -17,18 +18,6 @@ const options = {
 	}
 };
 
-
-function selectDrink() {
-
-	const options = {
-		method: "GET",
-		headers: {
-		  "X-RapidAPI-Key": "34bfbcce05msh118f7d7c2830c51p14f9d6jsna024c8daa8cb",
-		  "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
-		},
-	  };
-	  
-	
 	
 
 function selectDrink(liquor) {
@@ -45,8 +34,21 @@ function selectDrink(liquor) {
 				liquorArr.push(data.drinks[i]);
 			}
 
-			liquorArr = liquorArr.slice(0, 18);
 
+			// var sixLiquor = []
+			// for (var i = 0; i < 6; i++) {
+			// var randomLiquor = Math.floor(Math.random() * liquorArr.length)
+			// var selectLiquor = liquorArr[randomLiquor]
+			// 	sixLiquor.push(selectLiquor)
+			// }
+			// console.log(liquorArr)
+
+			liquorArr = liquorArr.slice(0, 18);
+			console.log(liquorArr);
+			displayDrinks(liquorArr)
+
+		})	
+}	
 
 var page = 1;
 var limit = 6;
@@ -350,7 +352,7 @@ $("#barBtn").on('click', function (event) {
 $("#prevBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
+	document.getElementById("quote-recipe-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
 	document.getElementById("hdrinkCards").style.display = "none";
 	prevItem();
@@ -361,7 +363,7 @@ $("#prevBtn").on('click', function (event) {
 $("#nextBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
+	document.getElementById("quote-recipe-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
 	document.getElementById("hdrinkCards").style.display = "none";
 	nextItem();
@@ -583,4 +585,3 @@ document.getElementById("hprevSix").addEventListener("click", function () {
 		}
 	}
 });
-
