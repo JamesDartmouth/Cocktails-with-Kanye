@@ -31,16 +31,10 @@ function selectDrink(liquor) {
 			}
 
 			// var sixLiquor = []
-			// for (var i = 0; i < 18; i++) {
+			// for (var i = 0; i < 6; i++) {
 			// var randomLiquor = Math.floor(Math.random() * liquorArr.length)
 			// var selectLiquor = liquorArr[randomLiquor]
 			// 	sixLiquor.push(selectLiquor)
-			// }
-			// console.log(liquorArr)
-			// for (var prop in data.drinks) {
-			// 	if (data.drinks[prop]) {
-			// 		liquorArr.push(data.drinks[prop]);
-			// 	}
 			// }
 			// console.log(liquorArr)
 
@@ -352,7 +346,7 @@ $("#barBtn").on('click', function (event) {
 $("#prevBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
+	document.getElementById("quote-recipe-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
 	document.getElementById("hdrinkCards").style.display = "none";
 	prevItem();
@@ -363,7 +357,7 @@ $("#prevBtn").on('click', function (event) {
 $("#nextBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
+	document.getElementById("quote-recipe-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
 	document.getElementById("hdrinkCards").style.display = "none";
 	nextItem();
@@ -422,7 +416,7 @@ $("#dropdown-menu").on('click', function (event) {
 $("#prevBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
+	document.getElementById("quote-recipe-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
 	document.getElementById("hdrinkCards").style.display = "none";
 
@@ -434,7 +428,7 @@ $("#prevBtn").on('click', function (event) {
 $("#nextBtn").on('click', function (event) {
 	event.preventDefault();
 	document.getElementById("greeting").style.display = "none";
-	document.getElementById("quote-recipe-box").style.display = "content";
+	document.getElementById("quote-recipe-box").style.display = "block";
 	document.getElementById("drinkCards").style.display = "none";
 	document.getElementById("hdrinkCards").style.display = "none";
 })
@@ -604,3 +598,5 @@ document.getElementById("hprevSix").addEventListener("click", function () {
 		}
 	}
 });
+
+
