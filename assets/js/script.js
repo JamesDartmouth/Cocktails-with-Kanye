@@ -3,7 +3,9 @@ var quoteHistory = []
 var drinkHistory = []
 var sixPack = []
 let liquorArr = []
-
+var page = 1;
+var limit = 6;
+var numPages = 3;
 
 
 document.getElementById("quote-recipe-box").style.display = "none";
@@ -50,9 +52,7 @@ function selectDrink(liquor) {
 		})	
 }	
 
-var page = 1;
-var limit = 6;
-var numPages = 3;
+
 
 function displayDrinks(liquorArr) {
 
@@ -104,7 +104,9 @@ document.getElementById("prevSix").addEventListener("click", function () {
 });
 
 function paginate(array, pageSize, pageNum) {
+	console.log
 	return array.slice((pageNum - 1) * pageSize, pageNum * pageSize);
+
 }
 
 function getDrink(drinkSet) {
@@ -213,7 +215,7 @@ function randomDrink() {
 		.then(function (data) {
 			var quote = Object.values(data)
 			document.getElementById("quote").textContent = quote
-			console.log(data)
+			
 		})
 
 })	
@@ -521,7 +523,7 @@ $("#yeezy").on('click', function (event) {
 })
 $("#history").on('click', function (event) {
 	event.preventDefault();
-
+	page = 1;
 	document.getElementById("greeting").style.display = "none";
 	document.getElementById("quote-recipe-box").style.display = "none";
 	document.getElementById("drinkCards").style.display = "none";
@@ -531,13 +533,13 @@ $("#history").on('click', function (event) {
 
 function getHistory(){
 	var history =JSON.parse(localStorage.getItem("drinkObjects")) ||[]
-	console.log(history)
 	displayHistory(history);
 	
 	
-
 }
+
 function displayHistory(liquorArr){
+	console.log(liquorArr)
 	
 	document.getElementById("hname1").textContent = liquorArr[0].strDrink;
 	document.getElementById("hpic1").src = liquorArr[0].strDrinkThumb;
@@ -565,6 +567,7 @@ function displayHistory(liquorArr){
 }
 	
 document.getElementById("hnextSix").addEventListener("click", function () {
+	console.log(page)
 	if (page <= numPages) {
 		page++
 		displayHistory(paginate(liquorArr, 6, page));
@@ -572,6 +575,7 @@ document.getElementById("hnextSix").addEventListener("click", function () {
 			document.getElementById("hnextSix").disabled = true;
 			document.getElementById("hprevSix").disabled = false;
 		}
+		
 	}
 });
 
@@ -583,5 +587,6 @@ document.getElementById("hprevSix").addEventListener("click", function () {
 			document.getElementById("hprevSix").disabled = true;
 			document.getElementById("hnextSix").disabled = false;
 		}
+		
 	}
 });
