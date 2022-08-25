@@ -567,7 +567,7 @@ function displayHistory(liquorArr){
 document.getElementById("hnextSix").addEventListener("click", function () {
 	if (page <= numPages) {
 		page++
-		displayDrinks(paginate(liquorArr, 6, page));
+		displayHistory(paginate(liquorArr, 6, page));
 		if (page === numPages) {
 			document.getElementById("hnextSix").disabled = true;
 			document.getElementById("hprevSix").disabled = false;
@@ -578,7 +578,7 @@ document.getElementById("hnextSix").addEventListener("click", function () {
 document.getElementById("hprevSix").addEventListener("click", function () {
 	if (page <= numPages) {
 		page--
-		displayDrinks(paginate(liquorArr, 6, page));
+		displayHistory(paginate(liquorArr, 6, page));
 		if (page === 1) {
 			document.getElementById("hprevSix").disabled = true;
 			document.getElementById("hnextSix").disabled = false;
