@@ -2,7 +2,8 @@ var quoteHistory = [];
 var sixPack = [];
 let liquorArr = [];
 var localHistory;
-var page, historyPage = 1;
+var page = 1; 
+var historyPage = 1;
 var limit = 6;
 var numPages;
 var historyNumPages;
@@ -434,3 +435,5 @@ document.getElementById("hprevSix").addEventListener("click", function () {
     }
   }
 });
+
+// a;lksdjf;laksdjf;lkkasdjflkjasdlkfjlkjaklsdjfkkjkjlkj;lkjkljkj
